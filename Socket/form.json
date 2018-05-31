@@ -1,6 +1,7 @@
 {
-    "elements":
-    [
-        { "name": "Host", "type": "ValidationTextBox", "caption": "Host" }
-    ]
+  "elements":
+  [
+    { "type": "Label", "label": "Delay on every message to not overwhelm the eGate"},
+    { "type": "NumberSpinner", "name": "MessageDelay", "caption": "Milliseconds"}
+  ]
 }

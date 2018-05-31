@@ -10,7 +10,9 @@ public function Create(){
 
   //These lines are parsed on Symcon Startup or Instance creation
   //You cannot use variables here. Just static values.
-  $this->RegisterPropertyString("Host", "");
+  $this->RegisterPropertyInteger("MessageDelay", 250);
+
+  $this->RequireParent("{3CFF0FD9-E306-41DB-9B5A-9D06D38576C3}"); //ClientSocket
 
 
 }
@@ -26,7 +28,6 @@ public function Destroy(){
 
 public function ApplyChanges(){
   //Never delete this line!
-  $this->Host = "";
   parent::ApplyChanges();
 
 }
