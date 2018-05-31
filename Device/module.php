@@ -32,10 +32,6 @@
 
         parent::ApplyChanges();
 
-        $receiveDataFilter = ".*\"ID\":\"1\".*";
-
-        $this->SetReceiveDataFilter($receiveDataFilter);
-
       }
 
       public function RequestAction($Ident, $Value) {
