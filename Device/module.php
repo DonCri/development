@@ -57,7 +57,7 @@
 
         switch($data){
 
-          case "ID":
+          case ID:
             SetValue($this->GetIDforIdent("eGateID"), $data->Buffer->ID);
           break;
         }
