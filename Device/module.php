@@ -23,8 +23,8 @@
         $this->ConnectParent("{C3EA1EE4-670B-46E8-856C-076C58AAE686}"); //DominoSwiss eGate
 
         $this->RegisterVariableString("eGateData", "Rohdaten eGate");
-        $this->RegisterVariableInteger("eGateID", "Speicherplatz");
-        $this->RegisterVariableBoolean("eGateCommand", "Kommando");
+        $this->RegisterVariableInteger("eGateID", "Speicherplatz", "", "1");
+        $this->RegisterVariableBoolean("eGateCommand", "Kommando", "", "2");
 
       }
 
