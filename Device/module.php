@@ -54,7 +54,7 @@
         // Datenverarbeitung und schreiben der Werte in die Statusvariablen
         SetValue($this->GetIDForIdent("eGateData"), $data->Buffer);
 
-        $this->SendDebug("BufferIn", print_r($data->Values, true), 0);
+        $this->SendDebug("eGateDatenFilter", print_r($data->Values, true), 0);
 
         switch($data->Values->Command)
         {
