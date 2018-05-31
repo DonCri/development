@@ -55,10 +55,10 @@
 
         SetValue($this->GetIDforIdent("eGateData"), $data->Buffer);
 
-        switch($data){
+        switch($ID){
 
-          case ID:
-            SetValue($this->GetIDforIdent("eGateID"), $data->Buffer->ID);
+          case 1:
+            SetValue($this->GetIDforIdent("eGateID"), 1);
           break;
         }
 
