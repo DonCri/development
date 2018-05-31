@@ -53,7 +53,7 @@
 
         // Datenverarbeitung und schreiben der Werte in die Statusvariablen
 
-        switch($data->Values->Command){
+        switch($data->Command){
           case 1:
             SetValue($this->GetIDforIdent("eGateCommand"), true);
           break;
