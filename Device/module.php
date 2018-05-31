@@ -53,15 +53,11 @@
 
         // Empfangene Daten vom Gateway/Splitter
         $data = json_decode($JSONString);
-
+        IPS_LogMessage("ReceiveData", utf8_decode($data->Buffer));
 
         // Datenverarbeitung und schreiben der Werte in die Statusvariablen
 
-        switch($data) {
-          case true:
-            SetValue($this->GetIDforIdent("eGateID"), 1);
-          break;
-        }
+        SetValue($this->GetIDforIdent("eGateData"), $data->Buffer);
 
 
 
