@@ -2,13 +2,15 @@
 
 class eGateG1 extends IPSModule {
 
+private $Host = "";
+
 public function Create(){
   //Never delete this line!
   parent::Create();
 
   //These lines are parsed on Symcon Startup or Instance creation
   //You cannot use variables here. Just static values.
-
+  $this->RegisterPropertyString("Host", "");
 
 
 }
@@ -24,7 +26,9 @@ public function Destroy(){
 
 public function ApplyChanges(){
   //Never delete this line!
+  $this->Host = "";
   parent::ApplyChanges();
+
 }
 
 public function ReceiveData($JSONString) {
