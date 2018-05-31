@@ -1,0 +1,14 @@
+{
+    "id": "{645922ED-E0D3-4B26-A67B-AD9B7C49A303}",
+    "name": "Device",
+    "type": 3,
+    "vendor": "DonCri",
+    "aliases":
+        [
+            "Device"
+        ],
+    "parentRequirements": ["{59499300-44CF-43C2-BD56-CFDCDD186DEF}"],
+    "childRequirements": [],
+    "implemented": ["{4200DA47-E6B9-4257-8D1F-5C0549D81793}"],
+    "prefix": "DC"
+}
