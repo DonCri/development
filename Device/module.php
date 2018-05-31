@@ -52,7 +52,6 @@
         IPS_LogMessage("ReceiveData", utf8_decode($data->Buffer));
 
         // Datenverarbeitung und schreiben der Werte in die Statusvariablen
-        $this->SendDebug("BufferIn", print_r($data->Values, true), 0);
 
         switch($data->Values){
           case ID:
