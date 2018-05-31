@@ -26,7 +26,15 @@
 
       }
 
-      public function RequestAction($Ident, $Value) { }
+      public function RequestAction($Ident, $Value) {
+
+        switch($Ident) {
+              case "eGateData":
+              //Neuen Wert in die Statusvariable schreiben
+                SetValue($this->GetIDForIdent($Ident), $Value);
+              break;
+              }
+      }
 
 
       public function ReceiveData($JSONString) {
