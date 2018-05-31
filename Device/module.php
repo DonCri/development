@@ -32,16 +32,6 @@
 
         parent::ApplyChanges();
 
-        switch($data->Values->Command){
-          case 1:
-            SetValue($this->GetIDforIdent("eGateCommand"), true);
-          break;
-
-          case 2:
-            SetValue($this->GetIDforIdent("eGateCommand"), false);
-          break;
-        }
-
       }
 
       public function RequestAction($Ident, $Value) {
@@ -62,6 +52,17 @@
         IPS_LogMessage("ReceiveData", utf8_decode($data->Buffer));
 
         // Datenverarbeitung und schreiben der Werte in die Statusvariablen
+        $this->SendDebug("BufferIn", print_r($data->Values, true), 0);
+
+        switch($data->Values->Command){
+          case 1:
+            SetValue($this->GetIDforIdent("eGateCommand"), true);
+          break;
+
+          case 2:
+            SetValue($this->GetIDforIdent("eGateCommand"), false);
+          break;
+        }
 
       }
 
