@@ -9,7 +9,7 @@ public function Create(){
   //These lines are parsed on Symcon Startup or Instance creation
   //You cannot use variables here. Just static values.
 
-  $this->RegisterPropertyInteger("MessageDelay", 250);
+
 
 }
 
