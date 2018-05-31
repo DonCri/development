@@ -11,7 +11,6 @@ public function Create(){
 
   $this->RegisterPropertyInteger("MessageDelay", 250);
 
-  $this->RequireParent("{8D27D53A-59C1-4C00-8155-05F55DD559FE}"); //ClientSocket
 }
 
 
