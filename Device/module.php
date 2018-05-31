@@ -32,6 +32,9 @@
 
         parent::ApplyChanges();
 
+        $receiveDataFilter = ".*\"ID\":\"". $this->ReadPropertyInteger("ID") ."\".*";
+
+        $this->SetReceiveDataFilter($receiveDataFilter);
       }
 
       public function RequestAction($Ident, $Value) {
@@ -54,17 +57,7 @@
         // Datenverarbeitung und schreiben der Werte in die Statusvariablen
         SetValue($this->GetIDForIdent("eGateData"), $data->Buffer);
 
-        $this->SendDebug("eGateDatenFilter", print_r($data->Values, true), 0);
-
-        switch($data->Values->Command)
-        {
-          case 1:
-            SetValue($this->GetIDforIdent("eGateCommand"), 1);
-          break;
-        }
-
-
-}
+      }
 
 
 
