@@ -23,6 +23,14 @@
         $this->ConnectParent("{C3EA1EE4-670B-46E8-856C-076C58AAE686}"); //DominoSwiss eGate
 
         $this->RegisterVariableString("eGateData", "Rohdaten eGate");
+        $this->RegisterVariableInteger("eGateID", "Speicherplatz");
+        $this->RegisterVariableInteger("eGateCommand", "Kommando");
+
+      }
+
+      public function ApplyChanges() {
+
+        parent::ApplyChanges();
 
       }
 
@@ -44,7 +52,18 @@
         IPS_LogMessage("ReceiveData", utf8_decode($data->Buffer));
 
         // Datenverarbeitung und schreiben der Werte in die Statusvariablen
-        SetValue($this->GetIDForIdent("eGateData"), $data->Buffer);
+        $this->SendDebug("BufferIn", print_r($data->Values, true), 0);
+
+        switch($data->Values){
+          case ID:
+            SetValue($this->GetIDforIdent("eGateID"));
+          break;
+          
+          case Command:
+            SetValue($this->GetIDforIdent("eGateCommand"));
+          break;
+        }
+
 
 }
 
