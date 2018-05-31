@@ -24,7 +24,7 @@
 
         $this->RegisterVariableString("eGateData", "Rohdaten eGate");
         $this->RegisterVariableInteger("eGateID", "Speicherplatz");
-        $this->RegisterVariableInteger("eGateCommand", "Kommando");
+        $this->RegisterVariableBoolean("eGateCommand", "Kommando");
 
       }
 
@@ -32,7 +32,7 @@
 
         parent::ApplyChanges();
 
-        $receiveDataFilter = ".*\"ID\":\".1.\".*";
+        $receiveDataFilter = ".*\"Command\":\".1.\".*";
 
         $this->SetReceiveDataFilter($receiveDataFilter);
       }
@@ -55,7 +55,13 @@
         IPS_LogMessage("ReceiveData", utf8_decode($data->Buffer));
 
         // Datenverarbeitung und schreiben der Werte in die Statusvariablen
-        SetValue($this->GetIDForIdent("eGateData"), $data->Buffer);
+        $this->SendDebug("BufferIn", print_r($data->Values, true), 0);
+
+        switch ($data->Values->Command) {
+          case 1:
+                SetValue($this->GetIDforIdent("eGateCommand"), true);
+            break;
+        }
 
       }
 
