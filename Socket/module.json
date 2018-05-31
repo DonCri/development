@@ -7,8 +7,8 @@
 	[
 		"eGate G1"
 	],
-	"parentRequirements": [],
+	"parentRequirements": ["{79827379-F36E-4ADA-8A95-5F8D1DC92FA9}"],
 	"childRequirements": ["{4200DA47-E6B9-4257-8D1F-5C0549D81793}"],
-	"implemented": ["{59499300-44CF-43C2-BD56-CFDCDD186DEF}"],
+	"implemented": ["{018EF6B5-AB94-40C6-AA53-46943E824ACF}", "{59499300-44CF-43C2-BD56-CFDCDD186DEF}"],
 	"prefix": "DonCri"
 }
