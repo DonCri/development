@@ -56,13 +56,15 @@
 
         switch($data->Values){
           case ID:
-            SetValue($this->GetIDforIdent("eGateID"));
+            SetValue($this->GetIDforIdent("eGateID") );
           break;
-          
+
           case Command:
             SetValue($this->GetIDforIdent("eGateCommand"));
           break;
         }
+
+        SetValue($this->GetIDForIdent("Value"), $data->Buffer);
 
 
 }
