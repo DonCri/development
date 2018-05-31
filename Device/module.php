@@ -32,7 +32,7 @@
 
         parent::ApplyChanges();
 
-        $receiveDataFilter = ".*\"ID\":\"". $this->ReadPropertyInteger("ID") ."\".*";
+        $receiveDataFilter = ".*\"ID\":\".1.\".*";
 
         $this->SetReceiveDataFilter($receiveDataFilter);
       }
