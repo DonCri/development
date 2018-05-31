@@ -20,7 +20,7 @@
 
         // Profil für Beschattung aktivieren / deaktivieren
 
-
+        $this->ConnectParent("{C3EA1EE4-670B-46E8-856C-076C58AAE686}"); //DominoSwiss eGate
 
       }
 
