@@ -68,11 +68,12 @@
         foreach ($arrayeGate as $arrayValue) {
             $eGateValue = explode("=", $arrayValue);
         }
+        SetValue($this->GetIDforIdent("ArrayIDNumber"), $eGateValue[1]);
 
-        SetValue($this->GetIDForIdent("ArrayID"), $arrayeGate[1]);
-        SetValue($this->GetIDForIdent("ArrayCommand"), $arrayeGate[2]);
-        SetValue($this->GetIDForIdent("ArrayValue"), $arrayeGate[3]);
-        SetValue($this->GetIDForIdent("ArrayPriority"), $arrayeGate[4]);
+        SetValue($this->GetIDforIdent("ArrayID"), $arrayeGate[1]);
+        SetValue($this->GetIDforIdent("ArrayCommand"), $arrayeGate[2]);
+        SetValue($this->GetIDforIdent("ArrayValue"), $arrayeGate[3]);
+        SetValue($this->GetIDforIdent("ArrayPriority"), $arrayeGate[4]);
 
         switch($arrayeGate[1]) {
           case "ID=2":
