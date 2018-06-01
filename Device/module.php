@@ -25,7 +25,10 @@
         $this->RegisterVariableString("eGateData", "Rohdaten eGate");
         $this->RegisterVariableInteger("eGateID", "Speicherplatz", "", "1");
         $this->RegisterVariableBoolean("eGateCommand", "Kommando", "", "2");
-        $this->RegisterVariableString("ArrayTest", "ArrayTest", "", "3");
+        $this->RegisterVariableString("ArrayID", "ArrayID", "", "3");
+        $this->RegisterVariableString("ArrayCommand", "ArrayCommand", "", "4");
+        $this->RegisterVariableString("ArrayValue", "ArrayValue", "", "5");
+        $this->RegisterVariableString("ArrayPriority", "ArrayPriority", "", "6");
 
       }
 
@@ -55,11 +58,12 @@
         // Datenverarbeitung und schreiben der Werte in die Statusvariablen
 
         SetValue($this->GetIDforIdent("eGateData"), $data->Buffer);
-
-        
         $arrayeGate = explode(";", $data->Buffer);
 
-        SetValue($this->GetIDForIdent("ArrayTest"), $arrayeGate[1]);
+        SetValue($this->GetIDForIdent("ArrayID"), $arrayeGate[1]);
+        SetValue($this->GetIDForIdent("ArrayCommand"), $arrayeGate[2]);
+        SetValue($this->GetIDForIdent("ArrayValue"), $arrayeGate[3]);
+        SetValue($this->GetIDForIdent("ArrayPriority"), $arrayeGate[4]);
 
       }
 
