@@ -49,21 +49,20 @@
 
         parent::ApplyChanges();
 
-        switch($Ident) {
-        case "eGateCommand":
-            //Hier würde normalerweise eine Aktion z.B. das Schalten ausgeführt werden
-            //Ausgaben über 'echo' werden an die Visualisierung zurückgeleitet
-            $this->TestSchalter();
-            //Neuen Wert in die Statusvariable schreiben
-            SetValue($this->GetIDForIdent($Ident), $Value);
-            break;
-
-          }
-
     }
 
     public function RequestAction($Ident, $Value) {
 
+      switch($Ident) {
+      case "eGateCommand":
+          //Hier würde normalerweise eine Aktion z.B. das Schalten ausgeführt werden
+          //Ausgaben über 'echo' werden an die Visualisierung zurückgeleitet
+          $this->TestSchalter();
+          //Neuen Wert in die Statusvariable schreiben
+          SetValue($this->GetIDForIdent($Ident), $Value);
+          break;
+
+        }
     }
 
 
