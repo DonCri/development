@@ -63,7 +63,7 @@
         // Datenverarbeitung und schreiben der Werte in die Statusvariablen
 
         SetValue($this->GetIDforIdent("eGateData"), $data->Buffer);
-        $arrayeGate = multiexplode(array(";","="), $data->Buffer);
+        $arrayeGate = explode(";","=", $data->Buffer);
 
         SetValue($this->GetIDForIdent("ArrayID"), $arrayeGate[1]);
         SetValue($this->GetIDForIdent("ArrayCommand"), $arrayeGate[3]);
