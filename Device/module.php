@@ -105,7 +105,7 @@
 
       public function Test() {
 
-        $TestCommand = $this->GetIDForIdent("eGateCommand");
+        $TestCommand = GetValue($this->GetIDForIdent("eGateCommand"));
 
         switch($TestCommand){
           case true:
