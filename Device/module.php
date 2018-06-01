@@ -70,7 +70,7 @@
         SetValue($this->GetIDForIdent("ArrayValue"), $arrayeGate[3]);
         SetValue($this->GetIDForIdent("ArrayPriority"), $arrayeGate[4]);
 
-        foreach($eGateNumbers as $arrayeGate) {
+        foreach($arrayeGate as $eGateNumbers) {
             $eGateValue = explode("=", $eGateNumbers);
         }
 
