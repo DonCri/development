@@ -64,7 +64,7 @@
 
         SetValue($this->GetIDForIdent("eGateData"), $data->Buffer);
 
-        $arrayeGate = preg_split(";*\=", $data->Buffer);
+        $arrayeGate = preg_split(";*\=*", $data->Buffer);
 
 
         SetValue($this->GetIDForIdent("ArrayID"), $arrayeGate[1]);
