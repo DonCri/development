@@ -38,7 +38,7 @@
         $this->RegisterVariableInteger("ArrayValueNumber", "ArrayValue", "", "8");
         $this->RegisterVariableString("ArrayPriority", "ArrayPriorityText", "", "9");
         $this->RegisterVariableInteger("ArrayPriorityNumber", "ArrayPriority", "", "10");
-        $this->RegisterVariableBoolean("eGateCommand2", "Kommando2", "", "11");
+        $this->RegisterVariableBoolean("eGateCommand2", "Kommando2", "Device.Switch", "11");
 
         $this->RegisterPropertyInteger("ID", "1");
 
