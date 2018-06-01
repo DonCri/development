@@ -73,13 +73,13 @@
         $valueArray = Array();
         foreach($arrayeGate as $eGateNumbers) {
             $eGateValue = explode("=", $eGateNumbers);
-            $valueArray[$value[0]] = $value[1];
+            $valueArray[$eGateValue[0]] = $eGateValue2[1];
         }
 
-        SetValue($this->GetIDForIdent("ArrayIDNumber"), $eGateValue[1]);
-        SetValue($this->GetIDForIdent("ArrayCommandNumber"), $eGateValue[2]);
-        SetValue($this->GetIDForIdent("ArrayValueNumber"), $eGateValue[3]);
-        SetValue($this->GetIDForIdent("ArrayPriorityNumber"), $eGateValue[4]);
+        SetValue($this->GetIDForIdent("ArrayIDNumber"), $eGateValue2[1]);
+        SetValue($this->GetIDForIdent("ArrayCommandNumber"), $eGateValue2[2]);
+        SetValue($this->GetIDForIdent("ArrayValueNumber"), $eGateValue2[3]);
+        SetValue($this->GetIDForIdent("ArrayPriorityNumber"), $eGateValue2[4]);
 
       }
 
