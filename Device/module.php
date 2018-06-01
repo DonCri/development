@@ -38,6 +38,7 @@
         $this->RegisterVariableInteger("ArrayValueNumber", "ArrayValue", "", "8");
         $this->RegisterVariableString("ArrayPriority", "ArrayPriorityText", "", "9");
         $this->RegisterVariableInteger("ArrayPriorityNumber", "ArrayPriority", "", "10");
+        $this->RegisterVariableBoolean("eGateCommand2", "Kommando2", "", "11");
 
         $this->RegisterPropertyInteger("ID", "1");
 
@@ -53,7 +54,7 @@
       public function RequestAction($Ident, $Value) {
 
         switch($Ident) {
-              case "eGateCommand":
+              case "eGateCommand2":
               //Neuen Wert in die Statusvariable schreiben
                 SetValue($this->GetIDForIdent($Ident), $Value);
                 $this->Test();
@@ -105,7 +106,7 @@
 
       public function Test() {
 
-        $TestCommand = GetValue($this->GetIDForIdent("eGateCommand"));
+        $TestCommand = GetValue($this->GetIDForIdent("eGateCommand2"));
 
         switch($TestCommand){
           case true:
