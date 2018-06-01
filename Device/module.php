@@ -56,6 +56,7 @@
               case "eGateCommand":
               //Neuen Wert in die Statusvariable schreiben
                 SetValue($this->GetIDForIdent($Ident), $Value);
+                $this->Test();
               break;
               }
       }
@@ -101,6 +102,8 @@
         }
 
       }
+
+      public function Test() {}
 
 }
 
