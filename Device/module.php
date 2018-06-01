@@ -55,13 +55,6 @@
 
         SetValue($this->GetIDforIdent("eGateData"), $data->Buffer);
 
-        switch($ID){
-
-          case 1:
-            SetValue($this->GetIDforIdent("eGateID"), 1);
-          break;
-        }
-
       }
 
 
