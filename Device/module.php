@@ -64,11 +64,8 @@
 
         SetValue($this->GetIDForIdent("eGateData"), $data->Buffer);
 
-        $arrayeGate = explode(";", $data->Buffer);
-        foreach ($arrayeGate as $arrayValue) {
-            $eGateValue = explode("=", $arrayValue);
-        }
-        SetValue($this->GetIDforIdent("ArrayIDNumber"), $eGateValue);
+        $arrayeGate = preg_split(";*\=", $data->Buffer);
+
 
         SetValue($this->GetIDForIdent("ArrayID"), $arrayeGate[1]);
         SetValue($this->GetIDForIdent("ArrayCommand"), $arrayeGate[2]);
