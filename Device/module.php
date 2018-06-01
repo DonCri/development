@@ -62,18 +62,18 @@
 
         // Datenverarbeitung und schreiben der Werte in die Statusvariablen
 
-        SetValue($this->GetIDforIdent("eGateData"), $data->Buffer);
+        SetValue($this->GetIDForIdent("eGateData"), $data->Buffer);
 
         $arrayeGate = explode(";", $data->Buffer);
         foreach ($arrayeGate as $arrayValue) {
             $eGateValue = explode("=", $arrayValue);
         }
-        SetValue($this->GetIDforIdent("ArrayIDNumber"), $eGateValue[1]);
+        SetValue($this->GetIDforIdent("ArrayIDNumber"), $eGateValue);
 
-        SetValue($this->GetIDforIdent("ArrayID"), $arrayeGate[1]);
-        SetValue($this->GetIDforIdent("ArrayCommand"), $arrayeGate[2]);
-        SetValue($this->GetIDforIdent("ArrayValue"), $arrayeGate[3]);
-        SetValue($this->GetIDforIdent("ArrayPriority"), $arrayeGate[4]);
+        SetValue($this->GetIDForIdent("ArrayID"), $arrayeGate[1]);
+        SetValue($this->GetIDForIdent("ArrayCommand"), $arrayeGate[2]);
+        SetValue($this->GetIDForIdent("ArrayValue"), $arrayeGate[3]);
+        SetValue($this->GetIDForIdent("ArrayPriority"), $arrayeGate[4]);
 
         switch($arrayeGate[1]) {
           case "ID=2":
