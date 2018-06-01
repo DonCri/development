@@ -29,7 +29,7 @@
 
         $this->RegisterVariableString("eGateData", "Rohdaten eGate");
         $this->RegisterVariableInteger("eGateID", "Speicherplatz", "", "1");
-        $this->RegisterVariableBoolean("eGateCommand", "Kommando", "Device.Switch", "2");
+        $this->RegisterVariableBoolean("eGateCommand", "Kommando", "", "2");
         $this->RegisterVariableString("ArrayID", "ArrayIDText", "", "3");
         $this->RegisterVariableInteger("ArrayIDNumber", "ArrayID", "", "4");
         $this->RegisterVariableString("ArrayCommand", "ArrayCommandText", "", "5");
