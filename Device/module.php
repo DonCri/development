@@ -32,7 +32,7 @@
         $this->RegisterVariableString("ArrayValue", "ArrayValueText", "", "7");
         $this->RegisterVariableInteger("ArrayValueNumber", "ArrayValue", "", "8");
         $this->RegisterVariableString("ArrayPriority", "ArrayPriorityText", "", "9");
-        $this->RegisterVariableInteger("ArrayPriorityNumber", "ArrayPriority", "", "9");
+        $this->RegisterVariableInteger("ArrayPriorityNumber", "ArrayPriority", "", "10");
 
 
       }
