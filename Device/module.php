@@ -25,15 +25,15 @@
         $this->RegisterVariableString("eGateData", "Rohdaten eGate");
         $this->RegisterVariableInteger("eGateID", "Speicherplatz", "", "1");
         $this->RegisterVariableBoolean("eGateCommand", "Kommando", "", "2");
-        $this->RegisterVariableString("ArrayID", "ArrayID", "", "3");
-        $this->RegisterVariableString("ArrayCommand", "ArrayCommand", "", "4");
-        $this->RegisterVariableString("ArrayValue", "ArrayValue", "", "5");
-        $this->RegisterVariableString("ArrayPriority", "ArrayPriority", "", "6");
+        $this->RegisterVariableString("ArrayID", "ArrayIDText", "", "3");
+        $this->RegisterVariableInteger("ArrayIDNumber", "ArrayID", "", "4");
+        $this->RegisterVariableString("ArrayCommand", "ArrayCommandText", "", "5");
+        $this->RegisterVariableInteger("ArrayCommandNumber", "ArrayCommand", "", "6");
+        $this->RegisterVariableString("ArrayValue", "ArrayValueText", "", "7");
+        $this->RegisterVariableInteger("ArrayValueNumber", "ArrayValue", "", "8");
+        $this->RegisterVariableString("ArrayPriority", "ArrayPriorityText", "", "9");
+        $this->RegisterVariableInteger("ArrayPriorityNumber", "ArrayPriority", "", "9");
 
-        $this->RegisterVariableInteger("ArrayIDNumber", "ArrayIDNumber", "", "7");
-        $this->RegisterVariableInteger("ArrayCommandNumber", "ArrayCommandNumber", "", "8");
-        $this->RegisterVariableInteger("ArrayValueNumber", "ArrayValueNumber", "", "9");
-        $this->RegisterVariableInteger("ArrayPriorityNumber", "ArrayPriorityNumber", "", "10");
 
       }
 
@@ -67,26 +67,16 @@
         $arrayeGate = preg_split("/[';''=']/", $data->Buffer);
 
 
-        SetValue($this->GetIDForIdent("ArrayID"), $arrayeGate[1]);
-        SetValue($this->GetIDForIdent("ArrayCommand"), $arrayeGate[2]);
-        SetValue($this->GetIDForIdent("ArrayValue"), $arrayeGate[3]);
-        SetValue($this->GetIDForIdent("ArrayPriority"), $arrayeGate[4]);
+        SetValue($this->GetIDForIdent("ArrayID"), $arrayeGate[2]);
+        SetValue($this->GetIDForIdent("ArrayIDNumber"), $arrayeGate[3]);
+        SetValue($this->GetIDForIdent("ArrayCommand"), $arrayeGate[4]);
+        SetValue($this->GetIDForIdent("ArrayCommandNumber"), $arrayeGate[5]);
+        SetValue($this->GetIDForIdent("ArrayValue"), $arrayeGate[6]);
+        SetValue($this->GetIDForIdent("ArrayValueNumber"), $arrayeGate[7]);
+        SetValue($this->GetIDForIdent("ArrayPriority"), $arrayeGate[8]);
+        SetValue($this->GetIDForIdent("ArrayPriorityNumber"), $arrayeGate[9]);
 
-        switch($arrayeGate[1]) {
-          case "ID=2":
 
-            switch($arrayeGate[2]) {
-              case "Command=3":
-                SetValue($this->GetIDforIdent("eGateCommand"), true);
-              break;
-
-              case "Command=4":
-                SetValue($this->GetIDforIdent("eGateCommand"), false);
-              break;
-            }
-
-          break;
-        }
 
       }
 
