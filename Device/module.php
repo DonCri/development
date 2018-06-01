@@ -15,8 +15,13 @@
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        // Profil für Schwellwerte
-
+        // Profil für Modul
+        if(!IPS_VariableProfileExists("Device.Switch")) {
+    			IPS_CreateVariableProfile("Device.Switch", 0);
+    			IPS_SetVariableProfileIcon("Device.Switch", "Power");
+    			IPS_SetVariableProfileAssociation("Device.Switch", 0, $this->Translate("Off"), "", -1);
+    			IPS_SetVariableProfileAssociation("Device.Switch", 1, $this->Translate("On"), "", -1);
+    		}
 
         // Profil für Beschattung aktivieren / deaktivieren
 

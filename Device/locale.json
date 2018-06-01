@@ -1,7 +1,8 @@
 {
     "translations": {
         "de": {
-            
+            "Off": "Aus",
+            "On": "An"
         }
     }
 }
