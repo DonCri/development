@@ -30,10 +30,10 @@
         $this->RegisterVariableString("ArrayValue", "ArrayValue", "", "5");
         $this->RegisterVariableString("ArrayPriority", "ArrayPriority", "", "6");
 
-        $this->RegisterVariableInteger("ArrayID", "ArrayIDNumber", "", "7");
-        $this->RegisterVariableInteger("ArrayCommand", "ArrayCommandNumber", "", "8");
-        $this->RegisterVariableInteger("ArrayValue", "ArrayValueNumber", "", "9");
-        $this->RegisterVariableInteger("ArrayPriority", "ArrayPriorityNumber", "", "10");
+        $this->RegisterVariableInteger("ArrayIDNumber", "ArrayIDNumber", "", "7");
+        $this->RegisterVariableInteger("ArrayCommandNumber", "ArrayCommandNumber", "", "8");
+        $this->RegisterVariableInteger("ArrayValueNumber", "ArrayValueNumber", "", "9");
+        $this->RegisterVariableInteger("ArrayPriorityNumber", "ArrayPriorityNumber", "", "10");
 
       }
 
