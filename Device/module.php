@@ -59,7 +59,7 @@
         $eGateDataArray = $data->Buffer;
         $arrayeGate = explode(";", $eGateDataArray);
 
-        SetValue($this->GetIDForIdent("ArrayTest"), $arrayeGate[0]);
+        SetValue($this->GetIDForIdent("ArrayTest"), $arrayeGate[1]);
 
       }
 
