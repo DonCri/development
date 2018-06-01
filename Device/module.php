@@ -63,23 +63,18 @@
         // Datenverarbeitung und schreiben der Werte in die Statusvariablen
 
         SetValue($this->GetIDforIdent("eGateData"), $data->Buffer);
-        $arrayeGate = explode(";", $data->Buffer);
+        $arrayeGate = multiexplode(";","=", $data->Buffer);
 
         SetValue($this->GetIDForIdent("ArrayID"), $arrayeGate[1]);
-        SetValue($this->GetIDForIdent("ArrayCommand"), $arrayeGate[2]);
-        SetValue($this->GetIDForIdent("ArrayValue"), $arrayeGate[3]);
-        SetValue($this->GetIDForIdent("ArrayPriority"), $arrayeGate[4]);
+        SetValue($this->GetIDForIdent("ArrayCommand"), $arrayeGate[3]);
+        SetValue($this->GetIDForIdent("ArrayValue"), $arrayeGate[5]);
+        SetValue($this->GetIDForIdent("ArrayPriority"), $arrayeGate[7]);
 
-        $valueArray = Array();
-        foreach($arrayeGate as $eGateNumbers) {
-            $eGateValue = explode("=", $eGateNumbers);
-            $valueArray[$eGateValue[0]] = $eGateValue2[1];
-        }
 
-        SetValue($this->GetIDForIdent("ArrayIDNumber"), $eGateValue2[1]);
-        SetValue($this->GetIDForIdent("ArrayCommandNumber"), $eGateValue2[2]);
-        SetValue($this->GetIDForIdent("ArrayValueNumber"), $eGateValue2[3]);
-        SetValue($this->GetIDForIdent("ArrayPriorityNumber"), $eGateValue2[4]);
+        SetValue($this->GetIDForIdent("ArrayIDNumber"), $eGateValue2[2]);
+        SetValue($this->GetIDForIdent("ArrayCommandNumber"), $eGateValue2[4]);
+        SetValue($this->GetIDForIdent("ArrayValueNumber"), $eGateValue2[6]);
+        SetValue($this->GetIDForIdent("ArrayPriorityNumber"), $eGateValue2[8]);
 
       }
 
