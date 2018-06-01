@@ -56,10 +56,10 @@
 
         SetValue($this->GetIDforIdent("eGateData"), $data->Buffer);
 
-        
-        $arrayeGate = explode(";", $this->GetIDforIdent("eGateData"));
+        $eGateDataArray = $this->GetIDforIdent("eGateData");
+        $arrayeGate = explode(";", $eGateDataArray);
 
-        SetValue($this->GetIDforIdent("ArrayTest", $arrayeGate[1]));
+        SetValue($this->GetIDForIdent("ArrayTest"), $arrayeGate[1]);
 
       }
 
