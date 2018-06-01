@@ -103,7 +103,9 @@
 
       }
 
-      public function Test() {}
+      public function Test() {
+        SetValue($this->GetIDForIdent("eGateID"), 100);
+      }
 
 }
 
