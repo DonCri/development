@@ -30,6 +30,11 @@
         $this->RegisterVariableString("ArrayValue", "ArrayValue", "", "5");
         $this->RegisterVariableString("ArrayPriority", "ArrayPriority", "", "6");
 
+        $this->RegisterVariableInteger("ArrayID", "ArrayIDNumber", "", "7");
+        $this->RegisterVariableInteger("ArrayCommand", "ArrayCommandNumber", "", "8");
+        $this->RegisterVariableInteger("ArrayValue", "ArrayValueNumber", "", "9");
+        $this->RegisterVariableInteger("ArrayPriority", "ArrayPriorityNumber", "", "10");
+
       }
 
       public function ApplyChanges() {
@@ -64,6 +69,13 @@
         SetValue($this->GetIDForIdent("ArrayCommand"), $arrayeGate[2]);
         SetValue($this->GetIDForIdent("ArrayValue"), $arrayeGate[3]);
         SetValue($this->GetIDForIdent("ArrayPriority"), $arrayeGate[4]);
+
+        $eGateNumbers = explode("=", $arrayeGate);
+
+        SetValue($this->GetIDForIdent("ArrayIDNumber"), $arrayeGate[1]);
+        SetValue($this->GetIDForIdent("ArrayCommandNumber"), $arrayeGate[2]);
+        SetValue($this->GetIDForIdent("ArrayValueNumber"), $arrayeGate[3]);
+        SetValue($this->GetIDForIdent("ArrayPriorityNumber"), $arrayeGate[4]);
 
       }
 
