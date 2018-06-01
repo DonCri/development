@@ -72,7 +72,15 @@
 
         switch($arrayeGate[1]) {
           case "ID=2":
-            SetValue($this->GetIDforIdent("eGateCommand"), true);
+            switch($arrayeGate[2]) {
+              case "Command=1":
+                SetValue($this->GetIDforIdent("eGateCommand"), true);
+              break;
+
+              case "Command=2":
+                SetValue($this->GetIDforIdent("eGateCommand"), false);
+              break;
+            }
           break;
         }
 
