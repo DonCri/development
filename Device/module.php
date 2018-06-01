@@ -69,7 +69,14 @@
         $arrayeGate = preg_split("/[';''=']/", $data->Buffer);
 
 
-        
+        SetValue($this->GetIDForIdent("ArrayID"), $arrayeGate[2]);
+        SetValue($this->GetIDForIdent("ArrayIDNumber"), $arrayeGate[3]);
+        SetValue($this->GetIDForIdent("ArrayCommand"), $arrayeGate[4]);
+        SetValue($this->GetIDForIdent("ArrayCommandNumber"), $arrayeGate[5]);
+        SetValue($this->GetIDForIdent("ArrayValue"), $arrayeGate[6]);
+        SetValue($this->GetIDForIdent("ArrayValueNumber"), $arrayeGate[7]);
+        SetValue($this->GetIDForIdent("ArrayPriority"), $arrayeGate[8]);
+        SetValue($this->GetIDForIdent("ArrayPriorityNumber"), $arrayeGate[9]);
 
         $ID = $arrayeGate[3];
         $Command = $arrayeGate[5];
