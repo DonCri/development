@@ -25,6 +25,7 @@
         $this->RegisterVariableString("eGateData", "Rohdaten eGate");
         $this->RegisterVariableInteger("eGateID", "Speicherplatz", "", "1");
         $this->RegisterVariableBoolean("eGateCommand", "Kommando", "", "2");
+        $this->RegisterVariableString("ArrayTest", "ArrayTest", "", "3");
 
       }
 
@@ -55,9 +56,12 @@
 
         SetValue($this->GetIDforIdent("eGateData"), $data->Buffer);
 
+        $eGateData = $date->Buffer;
+        $arrayeGate = explode(";", $eGateData);
+
+        SetValue($this->GetIDforIdent("ArrayTest", $arrayeGate[1]));
+
       }
-
-
 
 }
 
