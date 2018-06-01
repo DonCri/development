@@ -104,7 +104,19 @@
       }
 
       public function Test() {
-        SetValue($this->GetIDForIdent("eGateID"), 100);
+
+        $TestCommand = $this->GetIDForIdent("eGateCommand");
+
+        switch($TestCommand){
+          case true:
+            SetValue($this->GetIDForIdent("eGateID"), 100);
+          break;
+
+          case false:
+            SetValue($this->GetIDForIdent("eGateID"), 50);
+          break;
+        }
+
       }
 
 }
