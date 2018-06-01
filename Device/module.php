@@ -53,7 +53,7 @@
       public function RequestAction($Ident, $Value) {
 
         switch($Ident) {
-              case "eGateData":
+              case "eGateCommand":
               //Neuen Wert in die Statusvariable schreiben
                 SetValue($this->GetIDForIdent($Ident), $Value);
               break;
