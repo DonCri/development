@@ -58,6 +58,7 @@
 
         $eGateDataArray = $this->GetIDforIdent("eGateData");
         $arrayeGate = explode(";", $eGateDataArray);
+        var_dump($arrayeGate);
 
         SetValue($this->GetIDForIdent("ArrayTest"), $arrayeGate[0]);
 
