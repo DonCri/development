@@ -74,10 +74,10 @@
             $eGateValue = explode("=", $eGateNumbers);
         }
 
-        SetValue($this->GetIDForIdent("ArrayIDNumber"), $arrayeGate[1]);
-        SetValue($this->GetIDForIdent("ArrayCommandNumber"), $arrayeGate[2]);
-        SetValue($this->GetIDForIdent("ArrayValueNumber"), $arrayeGate[3]);
-        SetValue($this->GetIDForIdent("ArrayPriorityNumber"), $arrayeGate[0]);
+        SetValue($this->GetIDForIdent("ArrayIDNumber"), $eGateValue[1]);
+        SetValue($this->GetIDForIdent("ArrayCommandNumber"), $eGateValue[2]);
+        SetValue($this->GetIDForIdent("ArrayValueNumber"), $eGateValue[3]);
+        SetValue($this->GetIDForIdent("ArrayPriorityNumber"), $eGateValue[0]);
 
       }
 
