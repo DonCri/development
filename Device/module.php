@@ -34,6 +34,8 @@
         $this->RegisterVariableString("ArrayPriority", "ArrayPriorityText", "", "9");
         $this->RegisterVariableInteger("ArrayPriorityNumber", "ArrayPriority", "", "10");
 
+        $this->RegisterPropertyInteger("ID", "1");
+
 
       }
 
@@ -76,7 +78,22 @@
         SetValue($this->GetIDForIdent("ArrayPriority"), $arrayeGate[8]);
         SetValue($this->GetIDForIdent("ArrayPriorityNumber"), $arrayeGate[9]);
 
+        $ID = $arrayeGate[3];
+        $Command = $arrayeGate[5];
 
+        switch($ID) {
+          case $this->ReadPropertyInteger("ID");
+              switch($Command) {
+                case 3:
+                  SetValue($this->GetIDForIdent("eGateCommand"), true);
+                break;
+
+                case 4:
+                  SetValue($this->GetIDForIdent("eGateCommand"), false);
+                break;
+              }
+          break;
+        }
 
       }
 
