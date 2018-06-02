@@ -63,7 +63,7 @@ class Device extends IPSModule {
 
           //Neuen Wert in die Statusvariable schreiben
           SetValue($this->GetIDForIdent($Ident), $Value);
-          $this->TestSchalter($True, $False);
+          $this->TestSchalter();
           break;
 
         }
@@ -102,12 +102,12 @@ class Device extends IPSModule {
               switch($Command) {
                 case 3:
                   SetValue($this->GetIDForIdent("eGateCommand"), true);
-                  $this->TestSchalter($True, $False);
+                  $this->TestSchalter();
                 break;
 
                 case 4:
                   SetValue($this->GetIDForIdent("eGateCommand"), false);
-                  $this->TestSchalter($True, $False);
+                  $this->TestSchalter();
                 break;
               }
           break;
@@ -116,16 +116,16 @@ class Device extends IPSModule {
 
     }
 
-    public function TestSchalter(int $True, int $False) {
+    public function TestSchalter() {
       $State = GetValue($this->GetIDforIdent("eGateCommand"));
 
       switch ($State) {
         case true:
-            SetValue($this->GetIDForIdent("eGateID"), $True);
+            SetValue($this->GetIDForIdent("eGateID"), 100);
           break;
 
         case false:
-            SetValue($this->GetIDForIdent("eGateID"), $False);
+            SetValue($this->GetIDForIdent("eGateID"), 50);
         break;
       }
     }
