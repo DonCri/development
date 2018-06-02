@@ -121,11 +121,11 @@ class Device extends IPSModule {
 
       switch ($State) {
         case true:
-            SetValue($this->GetIDForIdent("eGateID"), "Instruction=2;ID=1;Command=1;Value=0;Priority=0");
+            SetValue($this->GetIDForIdent("eGateID"), "Instruction=1;ID=1;Command=1;Value=0;Priority=0");
           break;
 
         case false:
-            SetValue($this->GetIDForIdent("eGateID"), "Instruction=2;ID=1;Command=1;Value=0;Priority=0");
+            SetValue($this->GetIDForIdent("eGateID"), "Instruction=1;ID=1;Command=1;Value=0;Priority=0");
         break;
       }
     }
