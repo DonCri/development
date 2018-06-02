@@ -134,7 +134,7 @@ class Device extends IPSModule {
 
         // Weiterleiten zur I/O Instanz
         $data = GetValue($this->GetIDforIdent("eGateID"));
-        $resultat = $this->SendDataToParent(json_encode(Array("DataID" => "{59499300-44CF-43C2-BD56-CFDCDD186DEF}", "Buffer" => $data->Buffer)));
+        $resultat = $this->SendDataToParent(json_encode(Array("DataID" => "{59499300-44CF-43C2-BD56-CFDCDD186DEF}", "Buffer" => $data)));
 
         // Weiterverarbeiten und durchreichen
         return $resultat;
