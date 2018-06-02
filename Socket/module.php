@@ -50,8 +50,10 @@ public function ForwardData($JSONString) {
     $data = json_decode($JSONString);
     IPS_LogMessage("ForwardData", utf8_decode($data));
 
+    $resultat = $this->SendDataToParent(json_encode(Array("DataID" => "{018EF6B5-AB94-40C6-AA53-46943E824ACF}", "Buffer" => $data->Buffer)));
 
-  }
+    return $resultat;
+}
 
 }
 
