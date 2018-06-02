@@ -64,6 +64,7 @@ class Device extends IPSModule {
           //Neuen Wert in die Statusvariable schreiben
           SetValue($this->GetIDForIdent($Ident), $Value);
           $this->TestSchalter();
+          $this->ForwardData($JSONString);
           break;
 
         }
