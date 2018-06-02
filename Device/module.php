@@ -116,16 +116,16 @@ class Device extends IPSModule {
 
     }
 
-    public function TestSchalter() {
+    public function TestSchalter($True, $False) {
       $State = GetValue($this->GetIDforIdent("eGateCommand"));
 
       switch ($State) {
         case true:
-            SetValue($this->GetIDForIdent("eGateID"), 100);
+            SetValue($this->GetIDForIdent("eGateID"), $True);
           break;
 
         case false:
-            SetValue($this->GetIDForIdent("eGateID"), 50);
+            SetValue($this->GetIDForIdent("eGateID"), $False);
         break;
       }
     }
