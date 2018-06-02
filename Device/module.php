@@ -1,7 +1,7 @@
 <?
 
-  // Klassendefinition
-  class Device extends IPSModule {
+// Klassendefinition
+class Device extends IPSModule {
         /**
         * Die folgenden Funktionen stehen automatisch zur Verfügung, wenn das Modul über die "Module Control" eingefügt wurden.
         * Die Funktionen werden, mit dem selbst eingerichteten Prefix, in PHP und JSON-RPC wiefolgt zur Verfügung gestellt:
@@ -45,6 +45,7 @@
         $this->RegisterPropertyInteger("ID", "1");
 
 
+
     }
 
     public function ApplyChanges() {
@@ -59,9 +60,10 @@
       case "eGateCommand":
           //Hier würde normalerweise eine Aktion z.B. das Schalten ausgeführt werden
           //Ausgaben über 'echo' werden an die Visualisierung zurückgeleitet
-          $this->TestSchalter();
+
           //Neuen Wert in die Statusvariable schreiben
           SetValue($this->GetIDForIdent($Ident), $Value);
+          $this->TestSchalter();
           break;
 
         }
@@ -92,8 +94,6 @@
         SetValue($this->GetIDForIdent("ArrayPriority"), $arrayeGate[8]);
         SetValue($this->GetIDForIdent("ArrayPriorityNumber"), $arrayeGate[9]);
 
-
-
         $ID = $arrayeGate[3];
         $Command = $arrayeGate[5];
 
@@ -111,10 +111,10 @@
           break;
         }
 
+
     }
 
-    public function TestSchalter()
-    {
+    public function TestSchalter() {
       $State = GetValue($this->GetIDforIdent("eGateCommand"));
 
       switch ($State) {
@@ -128,6 +128,6 @@
       }
     }
 
-  }
+}
 
 ?>
