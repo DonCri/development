@@ -48,9 +48,9 @@ public function ForwardData($JSONString) {
 
     // Empfangene Daten von der Device Instanz
     $data = json_decode($JSONString);
-    IPS_LogMessage("ForwardData", utf8_decode($data->Buffer));
+    IPS_LogMessage("ForwardData", utf8_decode($data));
 
-    
+
   }
 
 }

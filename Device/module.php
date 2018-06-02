@@ -125,7 +125,7 @@ class Device extends IPSModule {
           break;
 
         case false:
-            SetValue($this->GetIDForIdent("eGateID"), "Instruction=1;ID=1;Command=1;Value=0;Priority=0");
+            SetValue($this->GetIDForIdent("eGateID"), "Instruction=1;ID=1;Command=2;Value=0;Priority=0");
         break;
       }
     }
