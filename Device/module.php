@@ -28,7 +28,7 @@ class Device extends IPSModule {
 
         // Test Variablen um die Verbindung zu testen, werden nicht benötigt für die Funktion
         $this->RegisterVariableString("eGateData", "Rohdaten eGate");
-        $this->RegisterVariableInteger("eGateID", "Speicherplatz", "", "1");
+        $this->RegisterVariableString("eGateID", "Speicherplatz", "", "1");
         $this->RegisterVariableBoolean("eGateCommand", "Kommando", "Device.Switch", "2");
         $this->EnableAction("eGateCommand");
 
@@ -121,13 +121,24 @@ class Device extends IPSModule {
 
       switch ($State) {
         case true:
-            SetValue($this->GetIDForIdent("eGateID"), 100);
+            SetValue($this->GetIDForIdent("eGateID"), "Instruction=2;ID=1;Command=1;Value=0;Priority=0");
           break;
 
         case false:
-            SetValue($this->GetIDForIdent("eGateID"), 50);
+            SetValue($this->GetIDForIdent("eGateID"), "Instruction=2;ID=1;Command=1;Value=0;Priority=0");
         break;
       }
+    }
+
+    public function ForwardData($JSONString) {
+
+        // Weiterleiten zur I/O Instanz
+        $data = GetValue($this->GetIDforIdent("eGateID"));
+        $resultat = $this->SendDataToParent(json_encode(Array("DataID" => "{59499300-44CF-43C2-BD56-CFDCDD186DEF}", "Buffer" => $data->Buffer)));
+
+        // Weiterverarbeiten und durchreichen
+        return $resultat;
+
     }
 
 }

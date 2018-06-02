@@ -44,6 +44,15 @@ public function ReceiveData($JSONString) {
     $this->SendDataToChildren(json_encode(Array("DataID" => "{4200DA47-E6B9-4257-8D1F-5C0549D81793}", "Buffer" => $data->Buffer)));
 }
 
+public function ForwardData($JSONString) {
+
+    // Empfangene Daten von der Device Instanz
+    $data = json_decode($JSONString);
+    IPS_LogMessage("ForwardData", utf8_decode($data->Buffer));
+
+    
+  }
+
 }
 
 ?>
