@@ -19,8 +19,8 @@ class eGateRohdaten extends IPSModule {
             // Diese Zeile nicht löschen.
 		parent::Create();
 
-		 $this->RegisterVariableString("light", "eGate Werte Test", "", "0");
-		 $this->RegisterVariableString("temperatur", "Temperatur", "", "1");
+		 $this->RegisterVariableString("eGate", "eGate Werte", "", "0");
+		 
  
         }
  
@@ -48,7 +48,7 @@ class eGateRohdaten extends IPSModule {
 	    $data = json_decode($JSONString);
  
 	    // Datenverarbeitung und schreiben der Werte in die Statusvariablen
-	    SetValue($this->GetIDForIdent("light"), print_r($data->Values, true));
+	    SetValue($this->GetIDForIdent("eGate"), print_r($data->Values, true));
  
 	}
 
