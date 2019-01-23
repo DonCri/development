@@ -1,6 +1,6 @@
 <?
     // Klassendefinition
-    class UTC extends IPSModule {
+class eGateRohdaten extends IPSModule {
  
         // Der Konstruktor des Moduls
         // Überschreibt den Standard Kontruktor von IPS
